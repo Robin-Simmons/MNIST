@@ -21,7 +21,7 @@ While all numbers were recognised, 3 were sliced too small.
 ![Semi-sucessful number recognition 2](https://i.postimg.cc/902BGz3P/image.png)
 Same problem as above.
 
-![image.png](https://i.postimg.cc/gallery/36o4qfhk2/)
+![image.png](https://postimg.cc/hf4DxLMF)
 Same image as above, but showing the method with overlapping subimages allowed and the displayed image being the binary mask rather than the raw image. 
 
 ### Method 2: Centre of mass
