@@ -18,8 +18,8 @@ The labels are then passed to ndimage.find_objects which returns x and y slices 
 ![Semi-sucessful number recognition](https://i.postimg.cc/SsJBwTj1/numbers-Found.png)
 While all numbers were recognised, 3 were sliced too small. 
 
-![Semi-sucessful number recognition 2](https://i.postimg.cc/902BGz3P/image.png)](https://postimg.cc/9RxT2mQz)
+![Semi-sucessful number recognition 2](https://i.postimg.cc/902BGz3P/image.png)
 Same problem as above.
 
-![image.png](https://i.postimg.cc/G3S28Vkt/image.png)](https://postimg.cc/DmLFRCp3)
+![image.png](https://i.postimg.cc/G3S28Vkt/image.png)
 Same image as above, but showing the method with overlapping subimages allowed and the displayed image being the binary mask rather than the raw image. 
