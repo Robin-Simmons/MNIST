@@ -1,8 +1,15 @@
 # MNIST
-The project objective is to be able to recognise all well spaced numbers from a well lit and framed image of a page, with 90%+ total accuracy.
+I'm trying to bring a trained MNIST network into "the real world". That involves building a network, training it, and then finding a way to get raw image data to look like MNIST data.
+## Part 1: "Solving" MNIST
+The smart way to solve MNIST is by using tensorflow. However this project isn't about simplicity, so I wrote it in numpy, using tensorflow only to download and extract the images.
 
+### No Hidden Layers
+My first attempt used sigmoid functions on every layer, with 2 hidden layers, and a quadratic cost function. I did this as these are all functions that seemed "simple" to differentiate and use. However even with multiple different layer sizes tested, an accuracy of more than 30% was not acheived. So I moved to softmax and cross entropy, which I had been avoiding. This worked instantly, even with no hidden layers, accuracy of 80% was possible.  Compared to an identical tensorflow network, the training of the network was much slower, approximately 10 times. Evaluation of the network was similar, tensorflow marginaly beating when hundreds of images were evaluated. 
 
-## Part 1: Finding possible numbers in an image
+### TODO Boosting the Accuracy
+Convolution seems like a good route.
+
+## Part 2: Finding possible numbers in an image
 While a neural net could be trained to find regions in an image likely to be numbers before passing them off to a categoriser, this would require a huge set of training data of many images and huge amounts of training. Instead, it is much simpler to use image processing and cluster analysis. 
 ### Method 1: Scipy ndimage.label
 Processing is done to increase the contrast and turn the RGB image into a binary one. Then scipy's ndimage.label assigns labels to objects that are made of overlapping matrices of the form
